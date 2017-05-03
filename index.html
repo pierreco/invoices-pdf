@@ -1,358 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title</title>
-  <style>
-    html {
-      line-height: 1.15; /* 1 */
-      -ms-text-size-adjust: 100%; /* 2 */
-      -webkit-text-size-adjust: 100%; /* 2 */
-    }
-
-    footer,
-    header,
-    section {
-      display: block;
-    }
-
-    h1 {
-      font-size: 2em;
-      margin: 0.67em 0;
-    }
-
-    img {
-      border-style: none;
-    }
-
-    ::-webkit-file-upload-button {
-      -webkit-appearance: button; /* 1 */
-      font: inherit; /* 2 */
-    }
-
-    body {
-      background-color: #fff;
-      padding: 32px;
-      margin: 0;
-      width: 531px;
-      font-family: Avenir;
-      padding-top: 8px;
-    }
-
-    h1 {
-      font-size: 16px;
-    }
-
-    h2 {
-      font-size: 14px;
-      font-weight: 900;
-      color: #000000;
-    }
-
-    .w-54 {
-      width: 54%;
-    }
-
-    p {
-      font-size: 12px;
-    }
-
-    h3 {
-      font-size: 10px;
-    }
-
-    .inline-block {
-      display: inline-block;
-    }
-
-    .float-left {
-      float: left;
-    }
-
-    .float-right {
-      float: right;
-    }
-
-    .clearfix:after {
-      content: " ";
-      visibility: hidden;
-      display: block;
-      height: 0;
-      clear: both;
-    }
-
-    header {
-      border-bottom: solid 2px #e6e9ee;
-    }
-
-    .graybox {
-      display: inline-block;
-      width: 125px;
-      height: 64px;
-      background-color: #e6e9ee;
-      margin-right: 5.9px;
-      text-align: center;
-
-    }
-
-    .graybox:last-child {
-      margin-right: 0;
-    }
-
-    .logo{
-      width: 172px;
-      height: 60px;
-      margin: 12px 0;
-    }
-
-    .codemotion {
-      text-align: right;
-    }
-
-    .adress {
-      line-height: 1.33;
-      text-align: right;
-      color: #000000;
-    }
-
-    .grayBold {
-      font-weight: 900;
-      color: #7b7e8d;
-    }
-    .bold-text{
-      font-weight: 900;
-    }
-
-    .invoiceNote {
-      border: solid 1px #e6e9ee;
-      vertical-align: middle;
-      padding-left: 8px;
-      margin: 15px 0;
-    }
-
-    table {
-      width: 100%;
-      border-spacing: 0;
-    }
-
-    td {
-      padding: 2px 10px;
-    }
-
-    tr:first-child {
-      background-color: #e6e9ee;
-    }
-
-    th {
-      padding: 0 10px;
-      text-align: left;
-    }
-
-    .itemDesc {
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: #686a7a;
-    }
-
-    .no-margin {
-      margin: 0 !important;
-    }
-
-    .totalWrapper {
-      text-align: right;
-      line-height: 1.33;
-
-    }
-
-    .gradient{
-      background-color: #ba77ff;
-    }
-
-    .aBlue{
-      color: #fff;
-      font-weight: normal;
-      letter-spacing: 2px;
-      margin: 8px;
-    }
-    .aBlue>span{
-      font-weight: bold;
-    }
-
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: 'Avenir';
+            src: url('/fonts/AvenirLTStd-Book/AvenirLTStd-Book.woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Avenir';
+            src: url('/fonts/AvenirLTStd-Heavy/AvenirLTStd-Heavy.woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+        
+        html {
+            line-height: 1.15;
+            /* 1 */
+            -ms-text-size-adjust: 100%;
+            /* 2 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+        }
+        
+        footer,
+        header,
+        section {
+            display: block;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+        
+        img {
+            border-style: none;
+        }
+        
+         ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+        
+        body {
+            background-color: #fff;
+            padding: 32px;
+            margin: 0;
+            width: 531px;
+            font-family: Avenir;
+            padding-top: 8px;
+        }
+        
+        h1 {
+            font-size: 16px;
+        }
+        
+        h2 {
+            font-size: 14px;
+            font-weight: 900;
+            color: #000000;
+        }
+        
+        .w-54 {
+            width: 54%;
+        }
+        
+        p {
+            font-size: 12px;
+        }
+        
+        h3 {
+            font-size: 10px;
+        }
+        
+        .inline-block {
+            display: inline-block;
+        }
+        
+        .float-left {
+            float: left;
+        }
+        
+        .float-right {
+            float: right;
+        }
+        
+        .clearfix:after {
+            content: " ";
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        
+        header {
+            border-bottom: solid 2px #e6e9ee;
+        }
+        
+        .graybox {
+            display: inline-block;
+            width: 125px;
+            height: 64px;
+            background-color: #e6e9ee;
+            margin-right: 5.9px;
+            text-align: center;
+        }
+        
+        .graybox:last-child {
+            margin-right: 0;
+        }
+        
+        .logo {
+            width: 172px;
+            height: 60px;
+            margin: 12px 0;
+        }
+        
+        .codemotion {
+            text-align: right;
+        }
+        
+        .adress {
+            line-height: 1.33;
+            text-align: right;
+            color: #000000;
+        }
+        
+        .grayBold {
+            font-weight: 900;
+            color: #7b7e8d;
+        }
+        
+        .bold-text {
+            font-weight: 900;
+        }
+        
+        .invoiceNote {
+            border: solid 1px #e6e9ee;
+            vertical-align: middle;
+            padding-left: 8px;
+            margin: 15px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-spacing: 0;
+        }
+        
+        td {
+            padding: 2px 10px;
+        }
+        
+        tr:first-child {
+            background-color: #e6e9ee;
+        }
+        
+        th {
+            padding: 0 10px;
+            text-align: left;
+        }
+        
+        .itemDesc {
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #686a7a;
+        }
+        
+        .no-margin {
+            margin: 0 !important;
+        }
+        
+        .totalWrapper {
+            text-align: right;
+            line-height: 1.33;
+        }
+        
+        .gradient {
+            background-color: #ba77ff;
+        }
+        
+        .aBlue {
+            color: #fff;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin: 8px;
+        }
+        
+        .aBlue>span {
+            font-weight: 900;
+        }
+    </style>
 </head>
+
 <body>
-<header>
-  <div class="clearfix">
-    <p class="inline-block float-left"><img class="logo" src="https://media.licdn.com/media/AAEAAQAAAAAAAAPzAAAAJDJmZjY5Y2NlLTVmNDUtNGRjYi04ZWI5LThjNmQyYTc4ZjY4Mg.png"></p>
-    <div class="inline-block float-right">
-      <h2 class="codemotion">Codemotion</h2>
-      <p class="adress">795 Folsom Ave, Suite 600<br>
-        San Francisco, CA 94107<br>
-        123 456-7890<br>
-        welcome@codemotion.us</p>
-    </div>
-  </div>
-</header>
-<section>
-  <div class="">
-    <h3 class="grayBold">Invoice to</h3>
-    <h2>Mallinda Hollaway</h2>
-    <p>BlackStudio</p>
-  </div>
-  <div class="clearfix">
-    <div class="float-left">
-      <h3 class="grayBold">Billing Info</h3>
-      <p class="">Mallinda Hollaway, 122346789<br>
-        1234 Silver Gate Avenue, Suite 430<br>
-        San Francisco, CA, 94118<br>
-        00971123456789<br>
-        malinda.h@gmail.com<br></p>
-    </div>
-    <div class="float-right">
-      <h3 class="grayBold">Shipping Info</h3>
-      <p>Mallinda Hollaway, 122346789<br>
-        1234 Silver Gate Avenue, Suite 430<br>
-        San Francisco, CA, 94118<br>
-        00971123456789<br>
-        malinda.h@gmail.com<br></p>
-    </div>
-  </div>
-  <div>
-    <div class="grayboxWrapper">
-      <div class="graybox">
-        <h1>0000002</h1>
-        <h3 class="grayBold">Invoice Number</h3>
-      </div>
-      <div class="graybox">
-        <h1>01/08/2017
-        </h1>
-        <h3 class="grayBold">Invoice Date</h3>
-      </div>
-      <div class="graybox">
-        <h1>02/08/2017</h1>
-        <h3 class="grayBold">Due Date</h3>
-      </div>
-      <div class="graybox">
-        <h1>$0.00</h1>
-        <h3 class="grayBold">Amount Due (USD)</h3>
-      </div>
-    </div>
+    <header>
+        <div class="clearfix">
+            <p class="inline-block float-left"><img class="logo" src="https://media.licdn.com/media/AAEAAQAAAAAAAAPzAAAAJDJmZjY5Y2NlLTVmNDUtNGRjYi04ZWI5LThjNmQyYTc4ZjY4Mg.png"></p>
+            <div class="inline-block float-right">
+                <h2 class="codemotion">Codemotion</h2>
+                <p class="adress">795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br> 123 456-7890<br> welcome@codemotion.us
+                </p>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="">
+            <h3 class="grayBold">Invoice to</h3>
+            <h2>Mallinda Hollaway</h2>
+            <p>BlackStudio</p>
+        </div>
+        <div class="clearfix">
+            <div class="float-left">
+                <h3 class="grayBold">Billing Info</h3>
+                <p class="">Mallinda Hollaway, 122346789<br> 1234 Silver Gate Avenue, Suite 430<br> San Francisco, CA, 94118<br> 00971123456789
+                    <br> malinda.h@gmail.com
+                    <br></p>
+            </div>
+            <div class="float-right">
+                <h3 class="grayBold">Shipping Info</h3>
+                <p>Mallinda Hollaway, 122346789<br> 1234 Silver Gate Avenue, Suite 430<br> San Francisco, CA, 94118<br> 00971123456789
+                    <br> malinda.h@gmail.com
+                    <br></p>
+            </div>
+        </div>
+        <div>
+            <div class="grayboxWrapper">
+                <div class="graybox">
+                    <h1>0000002</h1>
+                    <h3 class="grayBold">Invoice Number</h3>
+                </div>
+                <div class="graybox">
+                    <h1>01/08/2017
+                    </h1>
+                    <h3 class="grayBold">Invoice Date</h3>
+                </div>
+                <div class="graybox">
+                    <h1>02/08/2017</h1>
+                    <h3 class="grayBold">Due Date</h3>
+                </div>
+                <div class="graybox">
+                    <h1>$0.00</h1>
+                    <h3 class="grayBold">Amount Due (USD)</h3>
+                </div>
+            </div>
 
-    <div class="invoiceNote">
-      <h3>A note to the Invoice.</h3>
-    </div>
+            <div class="invoiceNote">
+                <h3>A note to the Invoice.</h3>
+            </div>
 
-    <table>
-      <tr>
-        <th>
-          <h3>DESCRIPTION</h3>
-        </th>
-        <th>
-          <h3>QTY</h3>
-        </th>
-        <th>
-          <h3>UNIT COST</h3>
-        </th>
-        <th>
-          <h3>
-            TAX
-          </h3>
-        </th>
-        <th>
-          <h3>TOTAL</h3>
-        </th>
-      </tr>
+            <table>
+                <tr>
+                    <th>
+                        <h3>DESCRIPTION</h3>
+                    </th>
+                    <th>
+                        <h3>QTY</h3>
+                    </th>
+                    <th>
+                        <h3>UNIT COST</h3>
+                    </th>
+                    <th>
+                        <h3>
+                            TAX
+                        </h3>
+                    </th>
+                    <th>
+                        <h3>TOTAL</h3>
+                    </th>
+                </tr>
 
-      <tr>
-        <td>
-          <p class="no-margin">Your Item Name</p>
-          <h3 class="itemDesc no-margin">Item description goes here</h3>
-        </td>
-        <td>
-          <p>1</p>
-        </td>
-        <td>
-          <p>$2,000.00</p>
-        </td>
-        <td>
-          <p>12.9%</p>
-        </td>
-        <td>
-          <p>$2,000.00</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p class="no-margin">Your Item Name</p>
-          <h3 class="itemDesc no-margin">Item description goes here</h3>
-        </td>
-        <td>
-          <p>1</p>
-        </td>
-        <td>
-          <p>$2,000.00</p>
-        </td>
-        <td>
-          <p>12.9%</p>
-        </td>
-        <td>
-          <p>$2,000.00</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p class="no-margin">Your Item Name</p>
-          <h3 class="itemDesc no-margin">Item description goes here</h3>
-        </td>
-        <td>
-          <p>
-            1
-          </p>
-        </td>
-        <td>
-          <p>$2,000.00</p>
-        </td>
-        <td>
-          <p>12.9%</p>
-        </td>
-        <td>
-          <p>$2,000.00</p>
-        </td>
-      </tr>
-    </table>
+                <tr>
+                    <td>
+                        <p class="no-margin">Your Item Name</p>
+                        <h3 class="itemDesc no-margin">Item description goes here</h3>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>
+                        <p>$2,000.00</p>
+                    </td>
+                    <td>
+                        <p>12.9%</p>
+                    </td>
+                    <td>
+                        <p>$2,000.00</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="no-margin">Your Item Name</p>
+                        <h3 class="itemDesc no-margin">Item description goes here</h3>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>
+                        <p>$2,000.00</p>
+                    </td>
+                    <td>
+                        <p>12.9%</p>
+                    </td>
+                    <td>
+                        <p>$2,000.00</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="no-margin">Your Item Name</p>
+                        <h3 class="itemDesc no-margin">Item description goes here</h3>
+                    </td>
+                    <td>
+                        <p>
+                            1
+                        </p>
+                    </td>
+                    <td>
+                        <p>$2,000.00</p>
+                    </td>
+                    <td>
+                        <p>12.9%</p>
+                    </td>
+                    <td>
+                        <p>$2,000.00</p>
+                    </td>
+                </tr>
+            </table>
 
-    <div class="clearfix">
-      <div class="float-left w-54">
-        <h3 class="grayBold">Terms</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-          sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-          nec, pellentesque eu, pretium quis.</p>
-      </div>
-      <div class="float-right totalWrapper">
-        <p>
-          Sub - Total amount: $5,000.00<br>
-          12% Discount: -$600.00<br>
-          Tax: $645.00
-        </p>
-        <p><span class="bold-text">Total Amount: $5,045.00</span> <br>
-          Amount Paid: $0.00</p>
-        <p class="bold-text">Amount Due (USD): $5,045.00</p>
-      </div>
-    </div>
-  </div>
+            <div class="clearfix">
+                <div class="float-left w-54">
+                    <h3 class="grayBold">Terms</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                        eu, pretium quis.</p>
+                </div>
+                <div class="float-right totalWrapper">
+                    <p>
+                        Sub - Total amount: $5,000.00<br> 12% Discount: -$600.00<br> Tax: $645.00
+                    </p>
+                    <p><span class="bold-text">Total Amount: $5,045.00</span> <br> Amount Paid: $0.00</p>
+                    <p class="bold-text">Amount Due (USD): $5,045.00</p>
+                </div>
+            </div>
+        </div>
 
 
-</section>
-<footer id="defaultFooter" class="inline-block float-right">
-  <h3 class="inline-block grayBold">This invoice is brought to you by</h3>
-  <div class="inline-block gradient">
-    <h1 class="aBlue">Accept.<span>Blue</span></h1>
-  </div>
-</footer>
+    </section>
+    <footer id="defaultFooter" class="inline-block float-right">
+        <h3 class="inline-block grayBold">This invoice is brought to you by</h3>
+        <div class="inline-block gradient">
+            <h1 class="aBlue">Accept.<span>Blue</span></h1>
+        </div>
+    </footer>
 </body>
+
 </html>
